@@ -1,5 +1,8 @@
 package com.capstone.ecommerce.security;
 
+import com.capstone.ecommerce.dao.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.config.annotation.authentication.configuration.EnableGlobalAuthentication;
 import org.springframework.security.core.GrantedAuthority;
 import com.capstone.ecommerce.model.User;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -13,6 +16,7 @@ public class MyUserPrincipal implements UserDetails {
     public MyUserPrincipal(User user) {
         this.user = user;
     }
+
 
 
     @Override
